@@ -1,0 +1,34 @@
+import turtle 
+
+# Set up the screen and turtle
+s = turtle.Screen()
+s.bgcolor('black')
+t = turtle.Turtle()
+t.speed(3)
+t.width(12)
+
+# Function to create a curve
+def Curve():
+    for i in range(200):
+        t.right(1)
+        t.forward(1)
+
+# Function to draw a heart
+def heart():
+    t.color('red', 'red')
+    t.begin_fill()
+    t.left(140)
+    t.forward(113)
+    Curve()
+    t.left(120)
+    Curve()
+    t.forward(112)
+    t.end_fill()
+
+# Draw the heart
+heart()
+
+
+# Complete the drawing
+t.hideturtle()  # Hide the turtle after drawing
+turtle.done()   # Finish the drawing
